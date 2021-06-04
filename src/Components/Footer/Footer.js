@@ -40,18 +40,18 @@ export default function Start() {
   return (
          <Grid container item direction='row' justify="center" alignItems="center" className={classes.toolbar}>
                <Grid  item  xs={12} sm={12} md={2}>
-                  <Link href='https://www.codechef.com/users/athar_12' style={{textDecoration:'none'}}>
+                  <a href='https://www.codechef.com/users/athar_12' target="_blank" style={{textDecoration:'none'}}>
                     <Button >
                         <img src={Codechef} alt="codechef" className={classes.img}/>
                     </Button>
-                  </Link>
+                  </a>
                </Grid>
                <Grid  item className={classes.box} xs={12} sm={12} md={2}>
-                 <Link href='https://codeforces.com/profile/KickAss' style={{textDecoration:'none'}}>
+                 <a href='https://codeforces.com/profile/KickAss' target="_blank" style={{textDecoration:'none'}}>
                     <Button >
                         <img src={Codeforces} alt="codeforces" className={classes.img}/>
                     </Button>
-                  </Link>
+                  </a>
                </Grid>
 
                <Grid  item className={classes.box} xs={12} sm={12} md={2}>

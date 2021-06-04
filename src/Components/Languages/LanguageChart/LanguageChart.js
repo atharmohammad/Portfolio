@@ -33,9 +33,19 @@ const useStyles = makeStyles((theme) => ({
      minHeight: '90vh',
      backgroundColor:'white',
      marginLeft:'80px' ,
+     width:'100%',
+     overflowX:'hidden',
     [theme.breakpoints.down('sm')]: {
       margin:'0',
       minHeight:'50vh'
+    },
+    [theme.breakpoints.up('sm')]: {
+      margin:'0',
+      minHeight:'60vh'
+    },
+    [theme.breakpoints.up('md')]: {
+      marginLeft:'80px' ,
+      minHeight: '90vh',
     },
   },
   skill:{
@@ -70,6 +80,63 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       height:'8vh',
     },
+  },
+  c:{
+    backgroundColor:'black',
+    height:'5vh',
+    margin:'2.4vh 0 0 6vh',
+    borderRadius:'5px',
+    width:'60vh',
+    [theme.breakpoints.down('xs')]: {
+      minWidth:'20vh',
+    },
+    [theme.breakpoints.up('sm')]: {
+      minWidth:'40vh',
+    },
+    [theme.breakpoints.up('md')]: {
+      minWidth:'60vh',
+    },
+    [theme.breakpoints.up('lg')]: {
+      minWidth:'90vh',
+    },
+  },
+  js:{
+    backgroundColor:'black',
+    height:'5vh',
+    margin:'2.4vh 0 0 6vh',
+    borderRadius:'5px',
+    width:'60vh',
+    [theme.breakpoints.down('xs')]: {
+      minWidth:'15vh',
+    },
+    [theme.breakpoints.up('sm')]: {
+      minWidth:'37vh',
+    },
+    [theme.breakpoints.up('md')]: {
+      minWidth:'54vh',
+    },
+    [theme.breakpoints.up('lg')]: {
+      minWidth:'80vh',
+    },
+  },
+  pyth:{
+    backgroundColor:'black',
+    height:'5vh',
+    margin:'2.4vh 0 0 6vh',
+    borderRadius:'5px',
+    width:'60vh',
+    [theme.breakpoints.down('xs')]: {
+      minWidth:'10vh',
+    },
+    [theme.breakpoints.up('sm')]: {
+      minWidth:'30vh',
+    },
+    [theme.breakpoints.up('md')]: {
+      minWidth:'50vh',
+    },
+    [theme.breakpoints.up('lg')]: {
+      minWidth:'70vh',
+    },
   }
 
 }));
@@ -83,20 +150,20 @@ export default function Chart() {
       <Typography variant='h2' className={`${entryStyle.textdiv} ${classes.skill}`}>
         Skills I have
       </Typography>
-        <Grid container direction="column" spacing="1" style={{width:'60%'}} className={entryStyle.textdiv}>
+        <Grid container direction="column" spacing="1" style={{width:'100%'}} className={entryStyle.textdiv}>
             <Box container display="flex" flexWrap="nowrap" className={classes.box}>
               <img src={Cplus} alt="c++"  className={`${bounceStyle.bounce2} ${classes.img}`}/>
-              <Grid item style={{backgroundColor:'black',height:'5vh',width:'65%',margin:'2.4vh 0 0 6vh',borderRadius:'5px'}}></Grid>
+              <Grid item className={classes.c}></Grid>
               <Typography className={classes.typography}>85%</Typography>
             </Box>
             <Box container display="flex" flexWrap="nowrap" className={classes.box}>
               <img src={Js} alt="Js"  className={`${bounceStyle.bounce2} ${classes.img}`} />
-              <Grid item style={{backgroundColor:'black',height:'5vh',width:'58%',margin:'2.4vh 0 0 6vh',borderRadius:'5px'}}></Grid>
+              <Grid item className={classes.js}></Grid>
               <Typography className={classes.typography}>80%</Typography>
             </Box>
             <Box container display="flex" flexWrap="nowrap" className={classes.box}>
               <img src={Python} alt="Python" className={`${bounceStyle.bounce2} ${classes.img}`} />
-              <Grid item style={{backgroundColor:'black',height:'5vh',width:'50%',margin:'2.4vh 0 0 6vh',borderRadius:'5px'}}></Grid>
+              <Grid item className={classes.pyth}></Grid>
               <Typography className={classes.typography}>70%</Typography>
             </Box>
           </Grid>

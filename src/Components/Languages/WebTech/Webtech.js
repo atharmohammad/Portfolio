@@ -22,14 +22,14 @@ const useStyles = makeStyles((theme) => ({
     ].join(','),
   },
   web:{
-    marginLeft:'15vh',
     [theme.breakpoints.down('sm')]: {
-      margin:'5vh 0 0 1vh',
+      margin:'5vh 0 0 5px',
     }
   },
   root:{
     minHeight: '40vh',
     backgroundColor:'white',
+    overflowX:'hidden',
     [theme.breakpoints.down('sm')]: {
       marginLeft:'0',
       paddingRight:'4vh'
@@ -64,8 +64,8 @@ export default function Webtexh() {
 
     const classes = useStyles();
     return (
-    <Grid id="chart" container sm={12} spacing={0} direction="column"  className={classes.root}>
-        <Grid container sm={12} direction='row' className={classes.box} className={entryStyle.textdiv}>
+    <Grid id="chart" container sm={12} spacing={0} direction="column" justify='flex-start'  className={classes.root}>
+        <Grid container sm={12} direction='row' justify='space-around' className={classes.box} className={entryStyle.textdiv}>
           <Grid item  direction="column" className={classes.web}>
             <img src={Rreact} alt="React" className={`${bounceStyle.bounce2} ${classes.img}`}/>
             <Typography className={classes.typography}>Reactjs</Typography>

@@ -20,10 +20,18 @@ const useStyles = makeStyles((theme) => ({
     height:'40vh',
     borderRadius:'15px',
     marginTop:'30px',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('xs')]: {
        height:'0',
        marginTop:'15px',
    },
+   [theme.breakpoints.up('sm')]: {
+      height:'30vh',
+      marginTop:'15px',
+  },
+  [theme.breakpoints.up('md')]: {
+     height:'40vh',
+     marginTop:'15px',
+ },
   },
   root: {
      color: "black",
@@ -40,12 +48,20 @@ const useStyles = makeStyles((theme) => ({
        'Noto Sans JP',
        'sans-serif',
      ].join(','),
-     [theme.breakpoints.down('sm')]: {
+     [theme.breakpoints.down('xs')]: {
         fontSize:'12px',
         margin:'2vh 2vh 0 0',
         width:'40vh'
-
     },
+    [theme.breakpoints.up('sm')]: {
+       fontSize:'14px',
+       margin:'2vh 2vh 0 0',
+       width:'40vh'
+   },
+   [theme.breakpoints.up('md')]: {
+      fontSize:'18px',
+      width:'100%'
+  },
    },
    title:{
      margin:'20px',
@@ -103,7 +119,7 @@ export default function About() {
         </Grid>
       </Box>
       <Typography className={classes.scroll}>Scroll down</Typography>
-    
+
     </Grid>
   );
 }

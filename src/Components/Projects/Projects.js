@@ -1,4 +1,4 @@
-import {Button,Typography,Box,Link} from '@material-ui/core'
+import {Button,Typography,Box} from '@material-ui/core'
 import { makeStyles,Grid,} from '@material-ui/core';
 import Burger from '../../Assets/burger.PNG'
 import Social from '../../Assets/socialnet.png'
@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
      minHeight:'100vh',
      marginLeft:'20vh' ,
+     overflowX:'hidden',
      [theme.breakpoints.down('sm')]: {
         marginLeft:'0',
     },
@@ -41,10 +42,22 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: '0 5px 15px 0px rgba(0,0,0,0.6)',
     borderRadius:'10px',
     marginLeft:'5vh',
-    [theme.breakpoints.down('sm')]: {
+    width:'50vh',
+    [theme.breakpoints.down('xs')]: {
      height:'20vh',
-     margin:'2vh 0 0 10vh'
+     margin:'2vh 0 0 5vh',
+     width:'30vh'
    },
+    [theme.breakpoints.up('sm')]: {
+     height:'30vh',
+     margin:'2vh 0 0 10vh',
+     width:'50vh'
+   },
+   [theme.breakpoints.up('md')]: {
+    height:'40vh',
+    marginLeft:'5vh',
+    width:'70vh'
+  },
   },
   typ:{
     margin:'2vh 0 0 20vh',
@@ -55,11 +68,26 @@ const useStyles = makeStyles((theme) => ({
       'Noto Sans JP',
       'sans-serif',
     ].join(','),
-    [theme.breakpoints.down('sm')]: {
-     fontSize:'15px',
-     width:'10%',
+    [theme.breakpoints.down('xs')]: {
+     fontSize:'10px',
+     width:'40%',
      margin:'2vh 0 0 10vh'
    },
+   [theme.breakpoints.up('sm')]: {
+    fontSize:'12px',
+    width:'70%',
+    margin:'2vh 0 0 10vh'
+  },
+  [theme.breakpoints.up('md')]: {
+    margin:'2vh 0 0 20vh',
+    textAlign:'left',
+    fontSize:'18px',
+    width:'100%',
+    fontFamily: [
+      'Noto Sans JP',
+      'sans-serif',
+    ].join(','),
+ },
  },
  project:{
    textAlign:'left',
@@ -68,7 +96,17 @@ const useStyles = makeStyles((theme) => ({
     fontSize:'30px',
     marginLeft:'10vh'
   },
- }
+},
+button:{
+  marginLeft:'5vh',
+  color:"#3b3737",
+  boxShadow: '0 5px 15px 0px rgba(0,0,0,0.7)',
+  fontFamily: ['Akaya Telivigala','cursive',].join(','),
+  [theme.breakpoints.down('xs')]: {
+    fontSize:'12px',
+    margin:'1vh 0 0 0'
+ },
+}
 
 }));
 export default function Project() {
@@ -82,13 +120,13 @@ export default function Project() {
     </Typography>
 
 
-      <Grid container sm={12} md={6} className={classes.box}>
-        <Grid container item sm={12} md={2}>
-          <Link href='https://burger-builder-react-92bac.web.app/' style={{textDecoration:'none'}}>
+      <Grid container xs={12} sm={12} md={6} className={classes.box}>
+        <Grid container item xs={12} sm={12} md={2}>
+          <a href='https://burger-builder-react-92bac.web.app/' target="_blank" style={{textDecoration:'none'}}>
             <Grid item className={entryStyle.textdiv}><img src={Burger} alt="" className={classes.img}/></Grid>
-          </Link>
+          </a>
         </Grid>
-        <Grid container item sm={12} md={10}>
+        <Grid container item xs={12} sm={12} md={10}>
           <Typography className={`${entryStyle.Imgdiv} ${classes.typ}`} >
             <span style={{fontFamily: [
               'Pacifico',
@@ -99,19 +137,18 @@ export default function Project() {
               all burgers orders are placed and stored on firebase and every user needs an authentication{""}
               <br/>
               <br/>
-              <Link href='https://burger-builder-react-92bac.web.app/' style={{textDecoration:'none'}}>
-                <Button container style={{color:"#3b3737",boxShadow: '0 5px 15px 0px rgba(0,0,0,0.7)',
-                  fontFamily: ['Akaya Telivigala','cursive',].join(',')}}>Burger-Builder</Button>{""}
-              </Link>
-              <Link href='https://github.com/atharmohammad/BurgerBuilder' style={{textDecoration:'none'}}>
-                <Button container style={{marginLeft:'5vh',color:"#3b3737",boxShadow: '0 5px 15px 0px rgba(0,0,0,0.7)',fontFamily: ['Akaya Telivigala','cursive',].join(',')}}>Github</Button>{""}
-              </Link>
+              <a href='https://burger-builder-react-92bac.web.app/' target="_blank" style={{textDecoration:'none'}}>
+                <Button container className={classes.button}>Burger-Builder</Button>{""}
+              </a>
+              <a href='https://github.com/atharmohammad/BurgerBuilder' target="_blank" style={{textDecoration:'none'}}>
+                <Button container className={classes.button}>Github</Button>{""}
+              </a>
           </Typography>
         </Grid>
       </Grid>
 
-      <Grid container sm={12} md={6} className={classes.box}>
-          <Grid container item sm={12} md={10}>
+      <Grid container xs={12} sm={12} md={6} className={classes.box}>
+          <Grid container item xs={12} sm={12} md={10}>
             <Typography className={`${entryStyle.Imgdiv} ${classes.typ}`} >
             <span style={{fontFamily: [
               'Pacifico',
@@ -123,25 +160,25 @@ export default function Project() {
                 groups
                 <br/>
                 <br/>
-                <Link href='https://github.com/atharmohammad/Social-Network' style={{textDecoration:'none'}}>
-                  <Button container style={{color:"#3b3737",boxShadow: '0 5px 15px 0px rgba(0,0,0,0.7)',fontFamily: ['Akaya Telivigala','cursive',].join(',')}}>Github</Button>{""}
-                </Link>
+                <a href='https://github.com/atharmohammad/Social-Network' target="_blank" style={{textDecoration:'none'}}>
+                  <Button container className={classes.button}>Github</Button>{""}
+                </a>
             </Typography>
           </Grid>
-        <Grid container item sm={12} md={2}>
-          <Link href='https://github.com/atharmohammad/Social-Network' style={{textDecoration:'none'}}>
+        <Grid container item xs={12} sm={12} md={2}>
+          <a href='https://github.com/atharmohammad/Social-Network' target="_blank" style={{textDecoration:'none'}}>
             <Box className={entryStyle.Imgdiv}><img src={Social} alt="" className={classes.img2}/></Box>
-          </Link>
+          </a>
         </Grid>
       </Grid>
 
-      <Grid container sm={12} md={6} className={classes.box}>
-      <Grid container item sm={12} md={2}>
-          <Link href='https://github.com/atharmohammad/Django-Websocket-Channel' style={{textDecoration:'none'}}>
+      <Grid container xs={12} sm={12} md={6} className={classes.box}>
+      <Grid container item xs={12} sm={12} md={2}>
+          <a href='https://github.com/atharmohammad/Django-Websocket-Channel' target="_blank" style={{textDecoration:'none'}}>
             <Box className={entryStyle.textdiv}><img src={Chat} alt=""className={classes.img}/></Box>
-          </Link>
+          </a>
         </Grid>
-        <Grid container item sm={12} md={10} style={{width:'100%'}}>
+        <Grid container item xs={12} sm={12} md={10} style={{width:'100%'}}>
           <Typography className={`${entryStyle.Imgdiv} ${classes.typ}`} >
           <span style={{fontFamily: [
             'Pacifico',
@@ -152,14 +189,14 @@ export default function Project() {
             the room he type, if such room does'nt exist then it will be created or he will join the already existing room.
             <br/>
             <br/>
-            <Link href='https://github.com/atharmohammad/Django-Websocket-Channel' style={{textDecoration:'none'}}>
-              <Button container style={{color:"#3b3737",boxShadow: '0 5px 15px 0px rgba(0,0,0,0.7)',fontFamily: ['Akaya Telivigala','cursive',].join(',')}}>Github</Button>{""}
-            </Link>
+            <a href='https://github.com/atharmohammad/Django-Websocket-Channel' target="_blank" style={{textDecoration:'none'}}>
+              <Button container className={classes.button}>Github</Button>{""}
+            </a>
         </Typography>
         </Grid>
       </Grid>
-      <Grid container sm={12} md={6} className={classes.box}>
-      <Grid container item sm={12} md={10}>
+      <Grid container xs={12} sm={12} md={6} className={classes.box}>
+      <Grid container item xs={12} sm={12} md={10}>
         <Typography className={`${entryStyle.Imgdiv} ${classes.typ}`} >
         <span style={{fontFamily: [
           'Pacifico',
@@ -170,15 +207,15 @@ export default function Project() {
               also tell how much percent of your total income spent on a item.
             <br/>
             <br/>
-            <Link href='https://github.com/atharmohammad/Budget-App' style={{textDecoration:'none'}}>
-              <Button container style={{color:"#3b3737",boxShadow: '0 5px 15px 0px rgba(0,0,0,0.7)',fontFamily: ['Akaya Telivigala','cursive',].join(',')}}>Github</Button>{""}
-            </Link>
+            <a href='https://github.com/atharmohammad/Budget-App' target="_blank" style={{textDecoration:'none'}}>
+              <Button container className={classes.button}>Github</Button>{""}
+            </a>
         </Typography>
         </Grid>
-        <Grid container item sm={12} md={2}>
-          <Link href='https://github.com/atharmohammad/Budget-App' style={{textDecoration:'none'}}>
+        <Grid container item xs={12} sm={12} md={2}>
+          <a href='https://github.com/atharmohammad/Budget-App' target="_blank" style={{textDecoration:'none'}}>
             <Box className={entryStyle.Imgdiv}><img src={Budget} alt="" className={classes.img2}/></Box>
-          </Link>
+          </a>
         </Grid>
       </Grid>
     </Grid>
