@@ -5,7 +5,7 @@ import Portfolio from './Container/Portfolio/Portfolio'
 
 function App() {
   return (
-    <BrowserRouter basename={window.location.pathname || ''}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
       <Switch>
         <Route exact path='/' component={Start}/>
