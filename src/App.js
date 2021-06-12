@@ -7,11 +7,11 @@ function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
-      <Switch>
-        <Route exact path='/' component={Start}/>
-        <Route exact path='/portfolio' component={Portfolio}/>
-        <Redirect path='/portfolio' />
-      </Switch>
+        <Switch>
+          <Route exact path='/' component={Start}/>
+          <Route exact path='/portfolio' component={Portfolio}/>
+          <Redirect path='/portfolio' />
+        </Switch>
       </div>
     </BrowserRouter>
   );
