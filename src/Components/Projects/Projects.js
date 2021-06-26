@@ -134,6 +134,17 @@ export default function Project() {
             <br />
             <br />
             <a
+              href="https://code-n-collab.netlify.app/"
+              target="_blank"
+              style={{ textDecoration: "none" }}
+            >
+              <Button container className={classes.button}>
+                Code-N-Collab
+              </Button>
+              {""}
+            </a>
+            
+            <a
               href="https://github.com/atharmohammad/Code-N-Collab"
               target="_blank"
               style={{ textDecoration: "none" }}
@@ -143,16 +154,7 @@ export default function Project() {
               </Button>
               {""}
             </a>
-            <a
-              href="https://code-n-collab.netlify.app/"
-              target="_blank"
-              style={{ textDecoration: "none" }}
-            >
-              <Button container className={classes.button}>
-                Deployed
-              </Button>
-              {""}
-            </a>
+
           </Typography>
         </Grid>
         <Grid container item xs={12} sm={12} md={2}>

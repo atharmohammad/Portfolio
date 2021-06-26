@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
   c:{
     backgroundColor:'black',
     height:'5vh',
-    margin:'2.4vh 0 0 6vh',
+    margin:'2.4vh 0 0 4vh',
     borderRadius:'5px',
     width:'60vh',
     [theme.breakpoints.down('xs')]: {
@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
   js:{
     backgroundColor:'black',
     height:'5vh',
-    margin:'2.4vh 0 0 6vh',
+    margin:'2.4vh 0 0 4vh',
     borderRadius:'5px',
     width:'60vh',
     [theme.breakpoints.down('xs')]: {
@@ -122,7 +122,7 @@ const useStyles = makeStyles((theme) => ({
   pyth:{
     backgroundColor:'black',
     height:'5vh',
-    margin:'2.4vh 0 0 6vh',
+    margin:'2.4vh 0 0 4vh',
     borderRadius:'5px',
     width:'60vh',
     [theme.breakpoints.down('xs')]: {
