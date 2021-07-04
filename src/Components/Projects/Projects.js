@@ -6,7 +6,7 @@ import Chat from "../../Assets/chat.PNG";
 import Budget from "../../Assets/budget.PNG";
 import entryStyle from "../About/About.module.css";
 import bounceStyle from "../Languages/LanguageChart/LanguageChart.module.css";
-import Pacman from "../Pacman/Pacman";
+import CodeNCollabGif from "../../Assets/codencollab.gif"
 
 const useStyles = makeStyles((theme) => ({
   img: {
@@ -130,7 +130,8 @@ export default function Project() {
             Code-N-Collab is a collaboration website for software
             developers,competitive coders,etc. It is developed using MERN
             stack,socket.io,convergence and provides user with:<br/> (1) Real-time
-            Code-Editor <br/> (2) LockoutChampionship <br/> (3) Blogs
+            Code-Editor <br/> (2) LockoutChampionship <br/> (3) Blogs<br/>
+            We have 100+ active user on it 🎉
             <br />
             <br />
             <a
@@ -164,7 +165,7 @@ export default function Project() {
             style={{ textDecoration: "none" }}
           >
             <Box className={entryStyle.Imgdiv}>
-              <img src={CnC} alt="CodeNCollab" className={classes.img2} />
+              <img src={CodeNCollabGif} alt="CodeNCollab" className={classes.img2} />
             </Box>
           </a>
         </Grid>
