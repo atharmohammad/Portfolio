@@ -9,7 +9,8 @@ import {useHistory} from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   img:{
-    height:'30vh',
+    height:'40vh',
+    width:'40vh',
     border:"5px solid black",
     borderRadius:'50%',
     margin:'20px',

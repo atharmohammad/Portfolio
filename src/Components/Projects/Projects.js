@@ -131,7 +131,7 @@ export default function Project() {
             developers,competitive coders,etc. It is developed using MERN
             stack,socket.io,convergence and provides user with:<br/> (1) Real-time
             Code-Editor <br/> (2) LockoutChampionship <br/> (3) Blogs<br/>
-            We have 100+ active user on it 🎉
+            Currently , Website have 200+ active user on it 🎉❣
             <br />
             <br />
             <a
