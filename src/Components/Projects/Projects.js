@@ -3,7 +3,7 @@ import { makeStyles, Grid } from "@material-ui/core";
 import Burger from "../../Assets/burger.PNG";
 import CnC from "../../Assets/CodeNCollab.PNG";
 import Chat from "../../Assets/chat.PNG";
-import Budget from "../../Assets/budget.PNG";
+import Store from "../../Assets/Store.png";
 import entryStyle from "../About/About.module.css";
 import bounceStyle from "../Languages/LanguageChart/LanguageChart.module.css";
 import CodeNCollabGif from "../../Assets/codencollab.gif"
@@ -100,6 +100,28 @@ const useStyles = makeStyles((theme) => ({
       margin: "1vh 0 0 0",
     },
   },
+  storeImg:{
+    height: "55vh",
+    boxShadow: "0 5px 15px 0px rgba(0,0,0,0.6)",
+    borderRadius: "10px",
+    marginLeft: "20vh",
+    width: "30vh",
+    [theme.breakpoints.down("xs")]: {
+      height: "35vh",
+      margin: "2vh 0 0 10vh",
+      width: "20vh",
+    },
+    [theme.breakpoints.up("sm")]: {
+      height: "35vh",
+      margin: "2vh 0 0 10vh",
+      width: "20vh",
+    },
+    [theme.breakpoints.up("md")]: {
+      height: "55vh",
+      marginLeft: "20vh",
+      width: "30vh",
+    },
+  }
 }));
 export default function Project() {
   const classes = useStyles();
@@ -224,18 +246,20 @@ export default function Project() {
         <Grid container item xs={12} sm={12} md={10}>
           <Typography className={`${entryStyle.Imgdiv} ${classes.typ}`}>
             <span style={{ fontFamily: ["Pacifico", "cursive"].join(",") }}>
-              Budget-Calculator
+              Store Inventory
             </span>
             <br />
             <br />
-            Javascript based application , used to calculate your monthly
-            budget, user can put their daily expense or income , and on that
-            basis it tells how much they have left, and also tell how much
-            percent of your total income spent on a item.
+            1). Store inventory solves the problem for big and small store owners to manage their
+            incoming and outgoing products.<br/>
+            2). Owners can also save important documents of sales and goods 
+            and manage all their customers and suppliers contact .It also provide product price management
+            <br/>
+            3). Tech Used : React-Native , Expo-Sqlite3 , Javascript
             <br />
             <br />
             <a
-              href="https://github.com/atharmohammad/Budget-App"
+              href="https://github.com/atharmohammad/Store-Inventory"
               target="_blank"
               style={{ textDecoration: "none" }}
             >
@@ -248,12 +272,12 @@ export default function Project() {
         </Grid>
         <Grid container item xs={12} sm={12} md={2}>
           <a
-            href="https://github.com/atharmohammad/Budget-App"
+            href="https://github.com/atharmohammad/Store-Inventory"
             target="_blank"
             style={{ textDecoration: "none" }}
           >
             <Box className={entryStyle.Imgdiv}>
-              <img src={Budget} alt="" className={classes.img2} />
+              <img src={Store} alt="Store Inventory" className={classes.storeImg} />
             </Box>
           </a>
         </Grid>
